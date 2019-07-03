@@ -1,0 +1,17 @@
+---
+
+galaxy_info:
+  author: Marat Khustnetdinov
+  description: Ansible role witch provision system for Ubuntu
+  galaxy_tags:
+    - system
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  categories:
+  - system
+  license: MIT
+  min_ansible_version: 1.8
+
+dependencies: []

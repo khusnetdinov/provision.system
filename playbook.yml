@@ -1,0 +1,10 @@
+---
+
+- hosts: provision
+  vars_files:
+    - defaults/main.yml
+  gather_facts: false
+  remote_user: "{{ provision_user_name }}"
+  sudo: true
+  tasks:
+    - import_tasks: tasks/main.yml

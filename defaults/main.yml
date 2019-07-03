@@ -1,0 +1,6 @@
+---
+
+provision_user_name: root
+provision_system_packages: ['curl', 'git', 'ufw']
+provision_system_locale: en_US.UTF-8
+provision_system_timezone: Europe/Moscow

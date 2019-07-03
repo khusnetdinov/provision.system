@@ -1,0 +1,29 @@
+---
+
+- name: "Provision: Update System"
+  apt:
+    name: "*"
+    state: latest
+
+- name: "Provision: Install Required packages"
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ provision_system_packages }}"
+
+- name: "Provision: Set Timezone"
+  timezone:
+    name: provision_system_timezone
+
+- name: UFW - Allow SSH connections
+  ufw:
+    rule: allow
+    name: OpenSSH
+  when: provision_system_ufw_enabled
+
+- name: UFW - Deny all other incoming traffic by default
+  ufw:
+    state: enabled
+    policy: deny
+    direction: incoming
+  when: provision_system_ufw_enabled
