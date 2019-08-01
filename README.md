@@ -1,4 +1,4 @@
-# Provision.user
+# Provision.system
 
 This receipt update system on Ubuntu server.
 
